@@ -1,4 +1,4 @@
-// JavaScript portofolio Andi Pratama
+// JavaScript portofolio Annisa Azzahra
 // Dipasang di ketiga halaman dengan defer
 
 // 1. Daftar keahlian (halaman Beranda), data dari data/keahlian.json

@@ -3,42 +3,42 @@
   {
     "judul": "Halaman Profil Pertama",
     "kategori": "HTML",
-    "gambar": "img/ss-beranda-porto.jfif",
+    "gambar": "img/ss-beranda-porto.avif",
     "alt": "Tangkapan layar halaman profil Andi Pratama",
     "deskripsi": "Halaman web pertama saya, dibuat dengan HTML dasar."
   },
   {
     "judul": "Form Kontak",
     "kategori": "HTML",
-    "gambar": "img/ss-kontak-porto.jfif",
+    "gambar": "img/ss-kontak-porto.avif",
     "alt": "Tangkapan layar form kontak berisi lima isian",
     "deskripsi": "Form dengan label dan validasi bawaan browser."
   },
   {
     "judul": "Tabel Jadwal Belajar",
     "kategori": "HTML",
-    "gambar": "img/screenshot jadwal belajar.png",
+    "gambar": "img/screenshot jadwal belajar.avif",
     "alt": "Tangkapan layar tabel jadwal belajar mandiri",
     "deskripsi": "Jadwal belajar mingguan dengan thead dan tbody."
   },
   {
     "judul": "Portofolio Responsif",
     "kategori": "CSS",
-    "gambar": "img/screenshot project 3.png",
+    "gambar": "img/screenshot project 3.avif",
     "alt": "Tangkapan layar portofolio di ponsel dan laptop",
     "deskripsi": "Rapi di ponsel, tablet, dan laptop dengan Flexbox."
   },
   {
     "judul": "Kalkulator Nilai Rapor",
     "kategori": "JavaScript",
-    "gambar": "img/ss-kalkulator-porto.jfif",
+    "gambar": "img/ss-kalkulator-porto(1).avif",
     "alt": "Tangkapan layar hasil kalkulator nilai di Console",
     "deskripsi": "Rata-rata dan predikat nilai dengan fungsi JavaScript."
   },
   {
     "judul": "Lima Soal Logika",
     "kategori": "JavaScript",
-    "gambar": "img/ss-logika-porto.jfif",
+    "gambar": "img/image (1).avif",
     "alt": "Tangkapan layar hasil uji lima soal logika",
     "deskripsi": "Lima fungsi logika yang masing-masing diuji 3 masukan."
   }

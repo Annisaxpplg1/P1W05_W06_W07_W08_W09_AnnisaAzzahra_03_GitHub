@@ -174,6 +174,13 @@ article img {
   border: 1px solid var(--warna-garis);
 }
 
+.daftar-kartu .kartu img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
 /* 5. Tabel */
 table {
     border-collapse: collapse;
@@ -385,11 +392,100 @@ body.gelap {
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
-/* Mengatur ukuran semua gambar di dalam kartu proyek agar seragam */
+
+/* TAMBAHAN OPTIMASI LIGHTHOUSE */
+
+/* 1. Fokus keyboard untuk Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 3px;
+}
+
+/* 2. Mencegah layout bergeser */
+.hero img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
 .kartu img {
-  width: 100%;          /* Lebar memenuhi kartu */
-  height: 160px;        /* Tinggi disamakan rata (misal 160px, bisa diubah sesuai selera) */
-  object-fit: cover;    /* Supaya gambar dipotong otomatis dengan pas tanpa gepeng */
-  border-radius: 6px;   /* Membuat sudut gambar sedikit melengkung rapi */
-  margin-bottom: 10px;  /* Jarak antara gambar dan teks di bawahnya */
+    aspect-ratio: 16 / 9;
+}
+
+/* 3. Optimasi tampilan gambar */
+img {
+    max-width: 100%;
+}
+
+/* 4. Mengurangi animasi bagi pengguna
+   yang mengaktifkan reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 5. Mencegah konten keluar layar */
+body {
+    overflow-wrap: break-word;
+}
+
+main {
+    min-width: 0;
+}
+
+/* ==========================================
+   TAMBAHAN OPTIMASI RENDERING
+   ========================================== */
+
+/* Menjaga proses rendering halaman tetap stabil */
+html {
+    text-size-adjust: 100%;
+}
+
+/* Menentukan area gambar agar browser
+   dapat memperhitungkan ruang sejak awal */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menjaga ukuran kontainer utama */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================
+   FIX CUMULATIVE LAYOUT SHIFT (CLS)
+   ========================================== */
+
+/* Menyediakan ruang sebelum proyek selesai dimuat */
+#daftar-proyek {
+    min-height: 850px;
+    align-content: start;
+}
+
+/* Menghindari perubahan posisi saat kartu dimasukkan */
+#daftar-proyek .kartu {
+    min-width: 0;
+}
+
+/* Penyesuaian untuk layar lebih besar */
+@media (min-width: 768px) {
+    #daftar-proyek {
+        min-height: 450px;
+    }
 }
